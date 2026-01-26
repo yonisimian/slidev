@@ -11,9 +11,9 @@ layout: center
 class: text-center
 drawings:
   persist: false # https://sli.dev/features/drawing
-transition: slide-left # https://sli.dev/guide/animations.html#slide-transitions
+transition: view-transition # https://sli.dev/guide/animations.html#slide-transitions
 mdc: true # https://sli.dev/features/mdc
-duration: 10min
+duration: 35min
 fonts:
   sans: 'Excalifont'
   mono: 'Fira Code, monospace'
@@ -26,9 +26,24 @@ fonts:
   font-weight: normal;
   font-style: normal;
 }
+
+.view-transition-block {
+  display: inline-block;
+}
+
+::view-transition-old(*),
+::view-transition-new(*),
+::view-transition-group(*) {
+  animation-duration: 1.0s;
+  animation-timing-function: ease-in-out;
+}
 </style>
 
-# Welcome to Slidev
+# 40 LLVM Classes In 10 Minutes
+
+---
+src: ./pages/llvm/arrayref.md
+---
 
 ---
 layout: center
