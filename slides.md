@@ -50,6 +50,10 @@ src: ./pages/llvm/smallvector.md
 ---
 
 ---
+src: ./pages/llvm/pagedvector.md
+---
+
+---
 layout: center
 class: text-center
 ---
