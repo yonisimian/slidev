@@ -54,6 +54,10 @@ src: ./pages/llvm/pagedvector.md
 ---
 
 ---
+src: ./pages/llvm/packedvector.md
+---
+
+---
 layout: center
 class: text-center
 ---
