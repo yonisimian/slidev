@@ -1,33 +1,33 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 
-const arrayData = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
+const arrayData = [10, 20, 30, 40, 50, 69, 70, 80, 90, 100, 110, 120]
 const cellWidth = 70 // px per cell
 
 // Animation state
 const step = ref(0)
-const ptrIndex = ref(2)
+const dataIndex = ref(2)
 const len = ref(4)
 
 // Computed positions
-const ptrArrowX = computed(() => ptrIndex.value * cellWidth + cellWidth / 2)
-const lenArrowX = computed(() => (ptrIndex.value + len.value - 1) * cellWidth + cellWidth / 2)
-const overlayLeft = computed(() => ptrIndex.value * cellWidth)
+const dataArrowX = computed(() => dataIndex.value * cellWidth + cellWidth / 2)
+const lenArrowX = computed(() => (dataIndex.value + len.value - 1) * cellWidth + cellWidth / 2)
+const overlayLeft = computed(() => dataIndex.value * cellWidth)
 const overlayWidth = computed(() => len.value * cellWidth + 2)
 
 // Animation sequence
 const animations = [
-    { ptr: 2, len: 4 },   // Initial: viewing elements 2-5
-    { ptr: 2, len: 6 },   // Expand len to 6
-    { ptr: 4, len: 6 },   // Move ptr to index 4
-    { ptr: 4, len: 3 },   // Shrink len to 3
-    { ptr: 0, len: 5 },   // Move to beginning
-    { ptr: 2, len: 4 },   // Back to initial
+    { data: 2, len: 4 },   // Initial: viewing elements 2-5
+    { data: 2, len: 6 },   // Expand len to 6
+    { data: 4, len: 6 },   // Move data to index 4
+    { data: 4, len: 3 },   // Shrink len to 3
+    { data: 0, len: 5 },   // Move to beginning
+    { data: 2, len: 4 },   // Back to initial
 ]
 
 const animateNext = () => {
     step.value = (step.value + 1) % animations.length
-    ptrIndex.value = animations[step.value].ptr
+    dataIndex.value = animations[step.value].data
     len.value = animations[step.value].len
 }
 
@@ -41,27 +41,26 @@ onMounted(() => {
 
 <template>
     <div class="flex flex-col items-center gap-6 mt-4">
-        <!-- ArrayRef structure label -->
-        <div class="flex items-center gap-2">
-            <div class="flex border-2 border-blue-400 rounded overflow-hidden">
-                <div class="bg-blue-500 px-5 py-3 text-white font-mono font-bold">
-                    ptr = {{ ptrIndex }}
-                </div>
-                <div class="bg-blue-600 px-5 py-3 text-white font-mono font-bold">
-                    len = {{ len }}
-                </div>
+        <!-- ArrayRef code block -->
+        <div class="flex items-start gap-6 pl-32">
+            <div class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden shadow-xl">
+                <pre class="px-4 py-3 font-mono text-sm leading-relaxed"><span class="text-[#569cd6]">template</span> <span class="text-[#d4d4d4]">&lt;</span><span class="text-[#569cd6]">typename</span> <span class="text-[#4ec9b0]">T</span><span class="text-[#d4d4d4]">&gt;</span>
+<span class="text-[#569cd6]">class</span> <span class="text-[#4ec9b0]">ArrayRef</span> <span class="text-[#d4d4d4]">{</span>
+    <span class="text-[#569cd6]">const</span> <span class="text-[#4ec9b0]">T</span> <span class="text-[#d4d4d4]">*</span><span class="text-[#9cdcfe]">data</span> <span class="text-[#d4d4d4]">=</span> <span class="text-[#b5cea8]">{{ dataIndex }}</span><span class="text-[#d4d4d4]">;</span>
+    <span class="text-[#4ec9b0]">size_t</span> <span class="text-[#9cdcfe]">len</span> <span class="text-[#d4d4d4]">=</span> <span class="text-[#b5cea8]">{{ len }}</span><span class="text-[#d4d4d4]">;</span>
+<span class="text-[#d4d4d4]">};</span></pre>
             </div>
-            <div class="text-gray-400 text-sm">← Just 2 words!</div>
+            <div class="text-gray-500 text-sm mt-2">← Just 16 bytes!</div>
         </div>
 
         <!-- Arrows with labels -->
-        <div class="relative w-full flex justify-center mt-12 -mb-12">
+        <div class="relative w-full flex justify-center mt-8 -mb-12">
             <div class="relative" :style="{ width: arrayData.length * cellWidth + 'px', height: '80px' }">
-                <!-- ptr arrow -->
+                <!-- data arrow -->
                 <div class="absolute flex flex-col items-center transition-all duration-700 ease-in-out"
-                    :style="{ left: ptrArrowX + 'px', transform: 'translateX(-50%)' }">
+                    :style="{ left: dataArrowX + 'px', transform: 'translateX(-50%)' }">
                     <div class="bg-blue-500 text-white px-3 py-1 rounded font-mono text-sm font-bold shadow-lg">
-                        ptr
+                        data
                     </div>
                     <div class="text-blue-400 text-4xl leading-none">↓</div>
                 </div>
@@ -69,8 +68,8 @@ onMounted(() => {
                 <!-- len arrow (points to last element in view) -->
                 <div class="absolute flex flex-col items-center transition-all duration-700 ease-in-out"
                     :style="{ left: lenArrowX + 'px', transform: 'translateX(-50%)' }">
-                    <div class="bg-blue-600 text-white px-3 py-1 rounded font-mono text-sm font-bold shadow-lg">
-                        ptr + len - 1
+                    <div class="bg-blue-500 text-white px-3 py-1 rounded font-mono text-sm font-bold shadow-lg">
+                        data + len - 1
                     </div>
                     <div class="text-blue-400 text-4xl leading-none">↓</div>
                 </div>
@@ -106,12 +105,6 @@ onMounted(() => {
                     [{{ idx }}]
                 </div>
             </div>
-        </div>
-
-        <!-- Description -->
-        <div class="text-gray-400 text-sm mt-2">
-            ArrayRef views <span class="text-blue-300 font-bold">{{ len }}</span> elements starting at index <span
-                class="text-blue-300 font-bold">{{ ptrIndex }}</span>
         </div>
     </div>
 </template>
