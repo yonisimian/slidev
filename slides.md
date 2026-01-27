@@ -46,6 +46,10 @@ src: ./pages/llvm/arrayref.md
 ---
 
 ---
+src: ./pages/llvm/smallvector.md
+---
+
+---
 layout: center
 class: text-center
 ---
