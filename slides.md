@@ -126,6 +126,42 @@ clicks: 1
 <AssociativeTransition :phase="0" :clicks="$clicks" />
 
 ---
+src: ./pages/llvm/smallset.md
+---
+
+---
+src: ./pages/llvm/stringset.md
+---
+
+---
+src: ./pages/llvm/denseset.md
+---
+
+---
+src: ./pages/llvm/sparseset.md
+---
+
+---
+src: ./pages/llvm/foldingset.md
+---
+
+---
+src: ./pages/llvm/radixtree.md
+---
+
+---
+src: ./pages/llvm/setvector.md
+---
+
+---
+src: ./pages/llvm/uniquevector.md
+---
+
+---
+src: ./pages/llvm/immutableset.md
+---
+
+---
 layout: center
 class: text-center
 ---
