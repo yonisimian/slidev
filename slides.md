@@ -71,7 +71,7 @@ class: text-center
 clicks: 1
 ---
 
-<ContainerTransition :phase="0" :clicks="$clicks" />
+<SequentialTransition :phase="0" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/bitvector.md
@@ -95,7 +95,7 @@ class: text-center
 clicks: 1
 ---
 
-<ContainerTransition :phase="1" :clicks="$clicks" />
+<SequentialTransition :phase="1" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/stringref.md
@@ -108,6 +108,14 @@ src: ./pages/llvm/twine.md
 ---
 src: ./pages/llvm/smallstring.md
 ---
+
+---
+layout: center
+class: text-center
+clicks: 1
+---
+
+<ADTUniverse :phase="0" :clicks="$clicks" />
 
 ---
 layout: center
