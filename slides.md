@@ -70,6 +70,22 @@ src: ./pages/llvm/container-transition.md
 ---
 
 ---
+src: ./pages/llvm/bitvector.md
+---
+
+---
+src: ./pages/llvm/smallbitvector.md
+---
+
+---
+src: ./pages/llvm/sparsebitvector.md
+---
+
+---
+src: ./pages/llvm/coalescingbitvector.md
+---
+
+---
 layout: center
 class: text-center
 ---
