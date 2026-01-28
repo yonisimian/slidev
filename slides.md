@@ -98,6 +98,18 @@ clicks: 1
 <ContainerTransition :phase="1" :clicks="$clicks" />
 
 ---
+src: ./pages/llvm/stringref.md
+---
+
+---
+src: ./pages/llvm/twine.md
+---
+
+---
+src: ./pages/llvm/smallstring.md
+---
+
+---
 layout: center
 class: text-center
 ---
