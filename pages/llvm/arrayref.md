@@ -43,7 +43,6 @@ processData(sv);
 ```cpp
 void processData(ArrayRef<int> data);
 
-
 processData({10, 20, 30});
 ```
 ````

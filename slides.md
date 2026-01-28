@@ -37,6 +37,14 @@ fonts:
   animation-duration: 1.0s;
   animation-timing-function: ease-in-out;
 }
+
+.slidev-code-wrapper {
+  overflow: hidden !important;
+}
+
+.shiki-magic-move-container {
+  overflow: hidden !important;
+}
 </style>
 
 # 40 LLVM Classes In 10 Minutes
