@@ -120,6 +120,14 @@ clicks: 1
 ---
 layout: center
 class: text-center
+clicks: 1
+---
+
+<AssociativeTransition :phase="0" :clicks="$clicks" />
+
+---
+layout: center
+class: text-center
 ---
 
 # Thank you!
