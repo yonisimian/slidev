@@ -66,8 +66,12 @@ src: ./pages/llvm/packedvector.md
 ---
 
 ---
-src: ./pages/llvm/container-transition.md
+layout: center
+class: text-center
+clicks: 1
 ---
+
+<ContainerTransition :phase="0" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/bitvector.md
@@ -84,6 +88,14 @@ src: ./pages/llvm/sparsebitvector.md
 ---
 src: ./pages/llvm/coalescingbitvector.md
 ---
+
+---
+layout: center
+class: text-center
+clicks: 1
+---
+
+<ContainerTransition :phase="1" :clicks="$clicks" />
 
 ---
 layout: center
