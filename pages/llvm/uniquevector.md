@@ -35,10 +35,6 @@ layout: default
 
 <UniqueVectorSources />
 
-<div class="mt-4 text-sm text-gray-500">
-Header: <code>llvm/ADT/UniqueVector.h</code>
-</div>
-
 ````md magic-move
 ```cpp
 // Creating a UniqueVector

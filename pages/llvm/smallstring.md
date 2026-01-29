@@ -35,10 +35,6 @@ layout: default
 
 <SmallStringSources />
 
-<div class="mt-4 text-sm text-gray-500">
-Header: <code>llvm/ADT/SmallString.h</code>
-</div>
-
 ````md magic-move
 ```cpp
 // Creating SmallStrings with inline buffer

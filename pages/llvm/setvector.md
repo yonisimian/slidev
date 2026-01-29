@@ -35,10 +35,6 @@ layout: default
 
 <SetVectorSources />
 
-<div class="mt-4 text-sm text-gray-500">
-Header: <code>llvm/ADT/SetVector.h</code>
-</div>
-
 ````md magic-move
 ```cpp
 // Creating a SetVector

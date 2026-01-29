@@ -35,10 +35,6 @@ layout: default
 
 <ImmutableSetSources />
 
-<div class="mt-4 text-sm text-gray-500">
-Header: <code>llvm/ADT/ImmutableSet.h</code>
-</div>
-
 ````md magic-move
 ```cpp
 // ImmutableSet uses a Factory for allocation

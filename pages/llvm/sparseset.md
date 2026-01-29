@@ -35,10 +35,6 @@ layout: default
 
 <SparseSetSources />
 
-<div class="mt-4 text-sm text-gray-500">
-Header: <code>llvm/ADT/SparseSet.h</code> • <code>llvm/ADT/SparseMultiSet.h</code>
-</div>
-
 ````md magic-move
 ```cpp
 // Creating a SparseSet for register numbers

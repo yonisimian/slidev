@@ -35,10 +35,6 @@ layout: default
 
 <SmallSetSources />
 
-<div class="mt-4 text-sm text-gray-500">
-Header: <code>llvm/ADT/SmallSet.h</code> • <code>llvm/ADT/SmallPtrSet.h</code>
-</div>
-
 ````md magic-move
 ```cpp
 // Creating SmallSets with inline capacity

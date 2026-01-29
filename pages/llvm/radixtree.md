@@ -35,10 +35,6 @@ layout: default
 
 <RadixTreeSources />
 
-<div class="mt-4 text-sm text-gray-500">
-Header: Used internally by <code>llvm/ADT/StringMap.h</code>
-</div>
-
 ````md magic-move
 ```cpp
 // StringMap uses radix tree internally
