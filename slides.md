@@ -231,6 +231,33 @@ src: ./pages/llvm/functionref.md
 
 ---
 layout: center
+clicks: 4
+---
+
+<ErrorTransition :clicks="$clicks" />
+
+---
+src: ./pages/llvm/optional.md
+---
+
+---
+src: ./pages/llvm/expected.md
+---
+
+---
+src: ./pages/llvm/error.md
+---
+
+---
+src: ./pages/llvm/exitonerror.md
+---
+
+---
+src: ./pages/llvm/unreachable.md
+---
+
+---
+layout: center
 class: text-center
 ---
 
