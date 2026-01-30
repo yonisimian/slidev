@@ -169,15 +169,5 @@
     >
       {{ current().action }}
     </div>
-
-    <!-- Phase indicator -->
-    <div class="mt-3 flex gap-1">
-      <div
-        v-for="i in animations.length"
-        :key="i"
-        class="w-2 h-2 rounded-full transition-all duration-300"
-        :class="phase === i - 1 ? 'bg-green-400' : 'bg-gray-600'"
-      />
-    </div>
   </div>
 </template>
