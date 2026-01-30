@@ -261,6 +261,10 @@ src: ./pages/llvm/iteration.md
 ---
 
 ---
+src: ./pages/llvm/formatting.md
+---
+
+---
 layout: center
 class: text-center
 ---
