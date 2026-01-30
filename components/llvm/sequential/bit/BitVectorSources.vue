@@ -2,9 +2,9 @@
 </script>
 
 <template>
-    <div class="flex justify-center items-center gap-8 mt-4">
+    <div class="flex justify-center items-center gap-8 mt-4 mb-12">
         <!-- Visual representation of BitVector sources -->
-        <div class="flex flex-col items-center gap-4">
+        <div class="flex flex-col items-center gap-0">
             <!-- Source types that can create a BitVector -->
             <div class="flex gap-6">
                 <div class="source-box">
@@ -18,7 +18,7 @@
             </div>
 
             <!-- Arrow -->
-            <div class="text-purple-400 text-2xl">↓</div>
+            <div class="text-purple-400 text-2xl mt-2">↓</div>
 
             <!-- BitVector representation -->
             <div class="bg-gray-800 rounded-lg p-4 border-2 border-purple-500">
@@ -33,9 +33,10 @@
                 </div>
             </div>
 
-            <!-- Operations -->
-            <div class="text-purple-400 text-2xl">↓</div>
+            <!-- Arrow -->
+            <div class="text-purple-400 text-2xl mt-2">↓</div>
 
+            <!-- Operations -->
             <div class="flex gap-4">
                 <div class="op-box">set(i)</div>
                 <div class="op-box">reset(i)</div>
