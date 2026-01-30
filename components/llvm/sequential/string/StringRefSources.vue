@@ -2,8 +2,8 @@
 </script>
 
 <template>
-    <div class="flex justify-center items-center gap-8 mt-4">
-        <div class="flex flex-col items-center gap-4">
+    <div class="flex justify-center items-center gap-8 mt-4 mb-12">
+        <div class="flex flex-col items-center gap-0">
             <!-- Source types -->
             <div class="flex gap-4">
                 <div class="source-box">
@@ -20,7 +20,8 @@
                 </div>
             </div>
 
-            <div class="text-green-400 text-2xl">↓</div>
+            <!-- Arrow -->
+            <div class="text-green-400 text-2xl mt-2">↓</div>
 
             <!-- StringRef -->
             <div class="bg-gray-800 rounded-lg p-3 border-2 border-green-500">
@@ -38,7 +39,8 @@
                 </div>
             </div>
 
-            <div class="text-green-400 text-2xl">↓</div>
+            <!-- Arrow -->
+            <div class="text-green-400 text-2xl mt-2">↓</div>
 
             <!-- Common operations -->
             <div class="flex gap-3">
