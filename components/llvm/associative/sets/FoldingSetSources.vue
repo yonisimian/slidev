@@ -19,7 +19,7 @@ onMounted(() => {
                 <!-- Step 1: Profile -->
                 <div class="flex flex-col items-center">
                     <div
-                        class="w-24 h-16 border-2 border-yellow-400 bg-yellow-400/20 rounded-lg flex flex-col items-center justify-center">
+                        class="w-28 h-16 border-2 border-yellow-400 bg-yellow-400/20 rounded-lg flex flex-col items-center justify-center">
                         <div class="text-xs text-gray-400">Profile(ID)</div>
                         <div class="text-sm text-yellow-300">hash content</div>
                     </div>
@@ -30,7 +30,7 @@ onMounted(() => {
                 <!-- Step 2: Find -->
                 <div class="flex flex-col items-center">
                     <div
-                        class="w-28 h-16 border-2 border-blue-400 bg-blue-400/20 rounded-lg flex flex-col items-center justify-center">
+                        class="w-36 h-16 border-2 border-blue-400 bg-blue-400/20 rounded-lg flex flex-col items-center justify-center">
                         <div class="text-xs text-gray-400">FindNodeOrInsertPos</div>
                         <div class="text-sm text-blue-300">lookup</div>
                     </div>
