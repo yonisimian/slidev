@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-full -mt-6">
+    <div class="flex flex-col items-center justify-center">
         <!-- Title -->
         <div class="text-lg font-bold text-emerald-400 mb-4">
             Radix Tree - Compressed Prefix Trie

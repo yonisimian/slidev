@@ -21,7 +21,7 @@ const isInline = computed(() => elements.value.length <= inlineCapacity)
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-full -mt-8">
+    <div class="flex flex-col items-center justify-center">
         <!-- Title -->
         <div class="text-lg font-bold text-orange-400 mb-6">
             SmallSet&lt;int, 8&gt; - Small Buffer Optimization

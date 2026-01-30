@@ -19,7 +19,7 @@ const getVisibleNodes = () => nodes.slice(0, phase.value)
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-full -mt-8">
+    <div class="flex flex-col items-center justify-center">
         <!-- Title -->
         <div class="text-lg font-bold text-indigo-400 mb-4">
             FoldingSet - Content-Based Uniquing

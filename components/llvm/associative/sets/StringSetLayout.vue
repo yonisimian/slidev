@@ -13,7 +13,7 @@ const strings = ['if', 'else', 'while', 'for', 'return']
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-full -mt-8">
+    <div class="flex flex-col items-center justify-center">
         <!-- Title -->
         <div class="text-lg font-bold text-yellow-400 mb-6">
             StringSet - Hash Table with String Interning

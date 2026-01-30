@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-full -mt-12">
+    <div class="flex flex-col items-center justify-center my-6">
         <!-- Comparison -->
         <div class="flex gap-10 transition-all duration-700"
             :class="showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">

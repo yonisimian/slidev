@@ -46,7 +46,7 @@ const getBucketState = (index) => {
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-full -mt-8">
+    <div class="flex flex-col items-center justify-center">
         <!-- Title -->
         <div class="text-lg font-bold text-cyan-400 mb-6">
             DenseSet - Open Addressing with Quadratic Probing
