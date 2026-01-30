@@ -1,0 +1,2 @@
+# Slidev markdown files use special syntax that Prettier misinterprets
+*.md
