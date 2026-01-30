@@ -52,7 +52,7 @@ const isElementAccessible = (idx) => isPageAllocated(getPageForElement(idx))
                 <pre class="px-4 py-3 font-mono text-sm leading-relaxed"><span class="text-[#569cd6]">template</span> <span class="text-[#d4d4d4]">&lt;</span><span class="text-[#569cd6]">typename</span> <span class="text-[#4ec9b0]">T</span><span class="text-[#d4d4d4]">,</span> <span class="text-[#569cd6]">size_t</span> <span class="text-[#9cdcfe]">PageSize</span><span class="text-[#d4d4d4]">&gt;</span>
 <span class="text-[#569cd6]">class</span> <span class="text-[#4ec9b0]">PagedVector</span> <span class="text-[#d4d4d4]">{</span>
     <span class="text-[#4ec9b0]">SmallVector</span><span class="text-[#d4d4d4]">&lt;</span><span class="text-[#4ec9b0]">T</span><span class="text-[#d4d4d4]">*&gt;</span> <span class="text-[#9cdcfe]">pages</span><span class="text-[#d4d4d4]">;</span>  <span class="text-[#6a9955]">// pointers to pages</span>
-    <span class="text-[#4ec9b0]">size_t</span> <span class="text-[#9cdcfe]">size</span><span class="text-[#d4d4d4]">;</span>                  <span class="text-[#6a9955]">// = {{ totalElements }}</span>
+    <span class="text-[#4ec9b0]">size_t</span> <span class="text-[#9cdcfe]">size</span><span class="text-[#d4d4d4]">;</span>            <span class="text-[#6a9955]">// = {{ totalElements }}</span>
 <span class="text-[#d4d4d4]">};</span></pre>
             </div>
         </div>
