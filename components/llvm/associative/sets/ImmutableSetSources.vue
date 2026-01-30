@@ -25,7 +25,7 @@ onMounted(() => {
                         <div class="text-red-400">state.erase(x); // undo!</div>
                         <div class="text-gray-400">explore(right);</div>
                     </div>
-                    <div class="text-xs text-red-400 mt-2">Manual undo required</div>
+                    <!-- <div class="text-xs text-red-400 mt-2">Manual undo required</div> -->
                 </div>
 
                 <!-- Immutable approach -->
@@ -36,7 +36,7 @@ onMounted(() => {
                         <div class="text-gray-400">explore(left, s2);</div>
                         <div class="text-green-400">explore(right, s1); // original!</div>
                     </div>
-                    <div class="text-xs text-green-400 mt-2">Automatic backtracking</div>
+                    <!-- <div class="text-xs text-green-400 mt-2">Automatic backtracking</div> -->
                 </div>
             </div>
         </div>

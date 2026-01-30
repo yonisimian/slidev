@@ -24,7 +24,7 @@ onMounted(() => {
                         <div class="text-xs text-gray-400 mb-1">Run 2: B, A, C</div>
                         <div class="text-xs text-gray-400">Run 3: C, B, A</div>
                     </div>
-                    <div class="text-xs text-red-400 mt-2">Non-reproducible builds!</div>
+                    <!-- <div class="text-xs text-red-400 mt-2">Non-reproducible builds!</div> -->
                 </div>
 
                 <!-- Deterministic -->
@@ -35,7 +35,7 @@ onMounted(() => {
                         <div class="text-xs text-gray-400 mb-1">Run 2: A, B, C</div>
                         <div class="text-xs text-gray-400">Run 3: A, B, C</div>
                     </div>
-                    <div class="text-xs text-green-400 mt-2">Reproducible builds! ✓</div>
+                    <!-- <div class="text-xs text-green-400 mt-2">Reproducible builds! ✓</div> -->
                 </div>
             </div>
         </div>
