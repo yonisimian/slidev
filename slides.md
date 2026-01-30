@@ -212,6 +212,22 @@ src: ./pages/llvm/immutablemap.md
 ---
 layout: center
 class: text-center
+clicks: 1
+---
+
+<ADTUniverse :phase="1" :clicks="$clicks" />
+
+---
+layout: center
+class: text-center
+clicks: 3
+---
+
+<MiscTransition :clicks="$clicks" />
+
+---
+layout: center
+class: text-center
 ---
 
 # Thank you!
