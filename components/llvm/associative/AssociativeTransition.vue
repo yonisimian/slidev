@@ -23,10 +23,8 @@
       <div
         class="world-card set-world"
         :class="{
-          dim: phase === 0 && clicks === 0,
-          'grow-orange': phase === 0 && clicks === 1,
-          selected: phase === 1 && clicks === 0,
-          shrink: phase === 1 && clicks === 1,
+          dim: (phase === 0 && clicks === 0) || (phase === 1 && clicks === 1),
+          selected: (phase === 0 && clicks === 1) || (phase === 1 && clicks === 0),
           done: phase >= 2,
         }"
       >
@@ -41,8 +39,7 @@
         class="world-card map-world"
         :class="{
           dim: phase === 0 || (phase === 1 && clicks === 0),
-          grow: phase === 1 && clicks === 1,
-          selected: phase === 2 && clicks === 0,
+          selected: phase === 1 && clicks === 1,
         }"
       >
         <div class="world-icon">🗺️</div>
@@ -96,6 +93,7 @@
 
   .world-card.selected {
     transform: scale(1.1);
+    opacity: 1;
   }
 
   /* Sets - Orange/Amber theme */
@@ -155,56 +153,5 @@
     font-size: 0.8rem;
     letter-spacing: 0.05em;
     text-align: center;
-  }
-
-  /* Animations */
-  @keyframes shrinkDown {
-    from {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-
-    to {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-  }
-
-  @keyframes growUp {
-    from {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-
-    to {
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0 0 50px rgba(20, 184, 166, 0.5);
-    }
-  }
-
-  @keyframes growUpOrange {
-    from {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-
-    to {
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0 0 50px rgba(245, 158, 11, 0.5);
-    }
-  }
-
-  .shrink {
-    animation: shrinkDown 0.6s ease-out forwards;
-  }
-
-  .grow {
-    animation: growUp 0.6s ease-out forwards;
-  }
-
-  .grow-orange {
-    animation: growUpOrange 0.6s ease-out forwards;
   }
 </style>
