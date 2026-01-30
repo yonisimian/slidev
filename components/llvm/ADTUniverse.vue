@@ -11,10 +11,9 @@
   })
 
   const categories = {
-    sequential:
-      'ArrayRef • SmallVector • PagedVector • PackedVector • BitVector • SmallBitVector • SparseBitVector • CoalescingBitVector • StringRef • Twine • SmallString',
-    associative: 'DenseSet • SmallSet • DenseMap • SmallDenseMap • StringMap • ...',
-    miscellaneous: 'PointerUnion • TinyPtrVector • IntervalMap • ...',
+    sequential: 'array-like • bits • strings',
+    associative: 'sets • maps',
+    miscellaneous: 'function_ref • error handling • iteration • formatting',
   }
 </script>
 
@@ -27,34 +26,30 @@
       <div
         class="category-card sequential-card"
         :class="{
+          dim: phase === 0 && clicks === 1,
           selected: phase === 0 && clicks === 0,
-          shrink: phase === 0 && clicks === 1,
           done: phase >= 1,
         }"
       >
         <div class="category-icon">📦</div>
         <div class="category-title">Sequential</div>
         <div class="category-subtitle">Containers</div>
-        <div class="category-count">11 classes</div>
-        <div class="category-status" v-if="phase >= 1">✓</div>
+        <div class="category-status" v-if="phase >= 0">✓</div>
       </div>
 
       <!-- Associative Containers -->
       <div
         class="category-card associative-card"
         :class="{
-          dim: phase === 0 && clicks === 0,
-          grow: phase === 0 && clicks === 1,
-          selected: phase === 1 && clicks === 0,
-          'shrink-orange': phase === 1 && clicks === 1,
+          dim: (phase === 0 && clicks === 0) || (phase === 1 && clicks === 1),
+          selected: (phase === 0 && clicks === 1) || (phase === 1 && clicks === 0),
           done: phase >= 2,
         }"
       >
         <div class="category-icon">🗂️</div>
         <div class="category-title">Associative</div>
         <div class="category-subtitle">Containers</div>
-        <div class="category-count">Sets & Maps</div>
-        <div class="category-status" v-if="phase >= 2">✓</div>
+        <div class="category-status" v-if="phase >= 1">✓</div>
       </div>
 
       <!-- Miscellaneous -->
@@ -62,13 +57,12 @@
         class="category-card misc-card"
         :class="{
           dim: phase <= 1 && !(phase === 1 && clicks === 1),
-          'grow-cyan': phase === 1 && clicks === 1,
+          selected: phase === 1 && clicks === 1,
         }"
       >
         <div class="category-icon">🧩</div>
         <div class="category-title">Miscellaneous</div>
         <div class="category-subtitle">Utilities</div>
-        <div class="category-count">Specialized</div>
       </div>
     </div>
 
@@ -153,6 +147,10 @@
     border-color: #06b6d4;
   }
 
+  .misc-card.selected {
+    box-shadow: 0 0 50px rgba(6, 182, 212, 0.5);
+  }
+
   .category-status {
     position: absolute;
     top: -10px;
@@ -184,12 +182,6 @@
     color: #94a3b8;
   }
 
-  .category-count {
-    font-size: 0.75rem;
-    color: #64748b;
-    margin-top: 0.5rem;
-  }
-
   .category-list {
     color: #94a3b8;
     margin-top: 3rem;
@@ -200,60 +192,5 @@
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
-  }
-
-  /* Animations */
-  @keyframes shrinkDown {
-    from {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-
-    to {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-  }
-
-  @keyframes growUp {
-    from {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-
-    to {
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0 0 50px rgba(245, 158, 11, 0.5);
-    }
-  }
-
-  @keyframes growUpCyan {
-    from {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-
-    to {
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0 0 50px rgba(6, 182, 212, 0.5);
-    }
-  }
-
-  .shrink {
-    animation: shrinkDown 0.6s ease-out forwards;
-  }
-
-  .shrink-orange {
-    animation: shrinkDown 0.6s ease-out forwards;
-  }
-
-  .grow {
-    animation: growUp 0.6s ease-out forwards;
-  }
-
-  .grow-cyan {
-    animation: growUpCyan 0.6s ease-out forwards;
   }
 </style>
