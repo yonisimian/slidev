@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# ImmutableSet
+<h1 class="view-transition-block">ImmutableSet</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A persistent set with structural sharing
-</div>
+<div class="text-gray-400 text-xl">A persistent set with structural sharing</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Immutable**: Operations return new sets, original unchanged
 - **Structural Sharing**: New versions share unchanged subtrees
 - **AVL Tree**: Balanced tree with O(log n) operations
 - **Memory Efficient**: Only modified paths are copied
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# ImmutableSet Memory Layout
+<h1 class="view-transition-block">ImmutableSet</h1>
 
 <ImmutableSetLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# ImmutableSet API & Usage
+<h1 class="view-transition-block">ImmutableSet</h1>
 
 <ImmutableSetSources />
 

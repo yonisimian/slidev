@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# UniqueVector
+<h1 class="view-transition-block">UniqueVector</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A vector with unique elements and stable numeric IDs
-</div>
+<div class="text-gray-400 text-xl">A vector with unique elements and stable numeric IDs</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Stable IDs**: Each element gets a unique 1-based index
 - **ID Lookup**: Fast retrieval by ID (vector access)
 - **Element Lookup**: Find ID of element (map lookup)
 - **No Removal**: IDs remain stable (no deletion support)
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# UniqueVector Memory Layout
+<h1 class="view-transition-block">UniqueVector</h1>
 
 <UniqueVectorLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# UniqueVector API & Usage
+<h1 class="view-transition-block">UniqueVector</h1>
 
 <UniqueVectorSources />
 

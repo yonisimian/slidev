@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# StringSet
+<h1 class="view-transition-block">StringSet</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A set optimized for string keys with efficient storage
-</div>
+<div class="text-gray-400 text-xl">A set optimized for string keys with efficient storage</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **String Interning**: Stores strings in a single allocation pool
 - **StringRef Keys**: Lookup with StringRef avoids copies
 - **Hash Table**: Fast O(1) average lookup and insertion
 - **Memory Efficient**: Strings stored contiguously, no per-entry allocation
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# StringSet Memory Layout
+<h1 class="view-transition-block">StringSet</h1>
 
 <StringSetLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# StringSet API & Usage
+<h1 class="view-transition-block">StringSet</h1>
 
 <StringSetSources />
 

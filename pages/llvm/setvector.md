@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# SetVector
+<h1 class="view-transition-block">SetVector</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A set with deterministic iteration order
-</div>
+<div class="text-gray-400 text-xl">A set with deterministic iteration order</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Dual Storage**: Vector for order + Set for uniqueness
 - **Insertion Order**: Iterates in the order elements were added
 - **Deterministic**: Same input → same iteration order
 - **Variants**: SmallSetVector for small-buffer optimization
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# SetVector Memory Layout
+<h1 class="view-transition-block">SetVector</h1>
 
 <SetVectorLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# SetVector API & Usage
+<h1 class="view-transition-block">SetVector</h1>
 
 <SetVectorSources />
 

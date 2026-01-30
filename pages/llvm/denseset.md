@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# DenseSet
+<h1 class="view-transition-block">DenseSet</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A hash set with quadratic probing for cache-friendly lookups
-</div>
+<div class="text-gray-400 text-xl">A hash set with quadratic probing for cache-friendly lookups</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Open Addressing**: Elements stored directly in buckets (no linked lists)
 - **Quadratic Probing**: Cache-friendly collision resolution
 - **Tombstones**: Supports efficient deletion without rehashing
 - **Power-of-2 Size**: Fast modulo via bit masking
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# DenseSet Memory Layout
+<h1 class="view-transition-block">DenseSet</h1>
 
 <DenseSetLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# DenseSet API & Usage
+<h1 class="view-transition-block">DenseSet</h1>
 
 <DenseSetSources />
 

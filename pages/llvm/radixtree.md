@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# RadixTree
+<h1 class="view-transition-block">RadixTree</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A compressed trie for prefix-based string operations
-</div>
+<div class="text-gray-400 text-xl">A compressed trie for prefix-based string operations</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Path Compression**: Merges single-child chains into edges
 - **Prefix Lookup**: Efficiently find all strings with a given prefix
 - **Memory Efficient**: Shared prefixes stored once
 - **StringMap Backend**: Powers LLVM's StringMap implementation
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# RadixTree Memory Layout
+<h1 class="view-transition-block">RadixTree</h1>
 
 <RadixTreeLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# RadixTree API & Usage
+<h1 class="view-transition-block">RadixTree</h1>
 
 <RadixTreeSources />
 

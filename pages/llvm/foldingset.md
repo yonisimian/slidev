@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# FoldingSet
+<h1 class="view-transition-block">FoldingSet</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A uniquing set for nodes with content-based identity
-</div>
+<div class="text-gray-400 text-xl">A uniquing set for nodes with content-based identity</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Content-Based Hashing**: Nodes define their own Profile() method
 - **Uniquing**: Only one instance per unique content
 - **Intrusive**: Nodes inherit from FoldingSetNode
 - **Flyweight Pattern**: Ideal for AST nodes, types, and constants
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# FoldingSet Memory Layout
+<h1 class="view-transition-block">FoldingSet</h1>
 
 <FoldingSetLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# FoldingSet API & Usage
+<h1 class="view-transition-block">FoldingSet</h1>
 
 <FoldingSetSources />
 

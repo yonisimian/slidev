@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# SmallString
+<h1 class="view-transition-block">SmallString</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A stack-allocated string buffer with std::string-like API
-</div>
+<div class="text-gray-400 text-xl">A stack-allocated string buffer with std::string-like API</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Inline Storage**: Pre-allocated buffer avoids heap for small strings
 - **Dynamic Growth**: Falls back to heap when capacity exceeded
 - **Compatible API**: Works like `std::string` but with small-buffer optimization
 - **Twine Integration**: Can receive materialized Twine results efficiently
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# SmallString Memory Layout
+<h1 class="view-transition-block">SmallString</h1>
 
 <SmallStringLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# SmallString API & Usage
+<h1 class="view-transition-block">SmallString</h1>
 
 <SmallStringSources />
 

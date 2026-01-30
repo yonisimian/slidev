@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# SparseSet
+<h1 class="view-transition-block">SparseSet</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A set with O(1) operations for dense integer universes
-</div>
+<div class="text-gray-400 text-xl">A set with O(1) operations for dense integer universes</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Two Arrays**: Sparse (indexed by value) + Dense (compact storage)
 - **O(1) Everything**: Insert, delete, lookup, and iteration
 - **No Tombstones**: Clean deletion without rehashing
 - **SparseMultiSet**: Variant allowing duplicate keys with counts
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# SparseSet Memory Layout
+<h1 class="view-transition-block">SparseSet</h1>
 
 <SparseSetLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# SparseSet API & Usage
+<h1 class="view-transition-block">SparseSet</h1>
 
 <SparseSetSources />
 

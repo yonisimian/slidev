@@ -1,29 +1,23 @@
 ---
-layout: intro
+layout: center
 ---
 
-# SmallSet
+<h1 class="view-transition-block">SmallSet</h1>
 
-<div class="text-xl text-gray-400 mt-4">
-A small set with inline storage optimization
-</div>
+<div class="text-gray-400 text-xl">A small set with inline storage optimization</div>
 
-<div class="mt-8 text-lg">
-<v-clicks>
-
+<!--
 - **Inline Storage**: Stores up to N elements in a linear array (no allocation)
 - **Automatic Upgrade**: Switches to `std::set` when exceeding threshold
 - **Linear Search**: Fast for small sets due to cache locality
 - **SmallPtrSet**: Specialized variant for pointer types with better hashing
-
-</v-clicks>
-</div>
+-->
 
 ---
 layout: default
 ---
 
-# SmallSet Memory Layout
+<h1 class="view-transition-block">SmallSet</h1>
 
 <SmallSetLayout />
 
@@ -31,7 +25,7 @@ layout: default
 layout: default
 ---
 
-# SmallSet API & Usage
+<h1 class="view-transition-block">SmallSet</h1>
 
 <SmallSetSources />
 
