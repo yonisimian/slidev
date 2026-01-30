@@ -164,6 +164,54 @@ src: ./pages/llvm/immutableset.md
 ---
 layout: center
 class: text-center
+clicks: 1
+---
+
+<AssociativeTransition :phase="1" :clicks="$clicks" />
+
+---
+src: ./pages/llvm/densemap.md
+---
+
+---
+src: ./pages/llvm/smalldensemap.md
+---
+
+---
+src: ./pages/llvm/mapvector.md
+---
+
+---
+src: ./pages/llvm/stringmap.md
+---
+
+---
+src: ./pages/llvm/indexedmap.md
+---
+
+---
+src: ./pages/llvm/valuemap.md
+---
+
+---
+src: ./pages/llvm/intervalmap.md
+---
+
+---
+src: ./pages/llvm/intervaltree.md
+---
+
+---
+src: ./pages/llvm/inteqclasses.md
+---
+
+---
+src: ./pages/llvm/immutablemap.md
+---
+
+---
+layout: center
+class: text-center
 ---
 
 # Thank you!
