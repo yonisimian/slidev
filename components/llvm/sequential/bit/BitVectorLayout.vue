@@ -52,22 +52,20 @@ const countSet = computed(() => activeBits.value.length)
 
         <!-- Bit array visualization -->
         <div class="relative w-full flex justify-center">
-            <div class="flex flex-wrap justify-center gap-1" :style="{ maxWidth: (cellWidth * 16 + 16) + 'px' }">
-                <div v-for="idx in totalBits" :key="idx - 1"
-                    class="font-mono text-xs text-center rounded transition-all duration-300" :class="isBitSet(idx - 1)
+            <div class="grid grid-cols-16 justify-center gap-4" :style="{ maxWidth: (cellWidth * 16 + 16) + 'px' }">
+                <div v-for="idx in totalBits" :key="idx - 1">
+                    <!-- Bit value -->
+                    <div class="font-mono text-xs text-center rounded transition-all duration-300" :class="isBitSet(idx - 1)
                         ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/50'
                         : 'bg-gray-700 text-gray-400'"
-                    :style="{ width: cellWidth + 'px', height: cellWidth + 'px', lineHeight: cellWidth + 'px' }">
-                    {{ isBitSet(idx - 1) ? '1' : '0' }}
+                        :style="{ width: cellWidth + 'px', height: cellWidth + 'px', lineHeight: cellWidth + 'px' }">
+                        {{ isBitSet(idx - 1) ? '1' : '0' }}
+                    </div>
+                    <!-- Index labels -->
+                    <div class="font-mono text-xs text-center text-gray-500" :style="{ width: cellWidth + 'px' }">
+                        {{ idx - 1 }}
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Index labels row -->
-        <div class="flex flex-wrap justify-center gap-1" :style="{ maxWidth: (cellWidth * 16 + 16) + 'px' }">
-            <div v-for="idx in totalBits" :key="'label-' + (idx - 1)"
-                class="font-mono text-xs text-center text-gray-500" :style="{ width: cellWidth + 'px' }">
-                {{ idx - 1 }}
             </div>
         </div>
 

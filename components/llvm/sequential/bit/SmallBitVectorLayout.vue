@@ -68,15 +68,20 @@ const isBitSet = (idx) => activeBits.value.includes(idx)
         </div>
 
         <!-- Bit array visualization -->
-        <div class="relative flex justify-center">
-            <div class="flex flex-wrap justify-center gap-1 transition-all duration-500"
-                :style="{ maxWidth: (cellWidth * 16 + 16) + 'px' }">
-                <div v-for="idx in currentSize" :key="idx - 1"
-                    class="font-mono text-xs text-center rounded transition-all duration-300" :class="isBitSet(idx - 1)
+        <div class="relative w-full flex justify-center">
+            <div class="grid grid-cols-16 justify-center gap-4" :style="{ maxWidth: (cellWidth * 16 + 16) + 'px' }">
+                <div v-for="idx in currentSize" :key="idx - 1">
+                    <!-- Bit value -->
+                    <div class="font-mono text-xs text-center rounded transition-all duration-300" :class="isBitSet(idx - 1)
                         ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/50'
                         : 'bg-gray-700 text-gray-400'"
-                    :style="{ width: cellWidth + 'px', height: cellWidth + 'px', lineHeight: cellWidth + 'px' }">
-                    {{ isBitSet(idx - 1) ? '1' : '0' }}
+                        :style="{ width: cellWidth + 'px', height: cellWidth + 'px', lineHeight: cellWidth + 'px' }">
+                        {{ isBitSet(idx - 1) ? '1' : '0' }}
+                    </div>
+                    <!-- Index labels -->
+                    <div class="font-mono text-xs text-center text-gray-500" :style="{ width: cellWidth + 'px' }">
+                        {{ idx - 1 }}
+                    </div>
                 </div>
             </div>
         </div>
