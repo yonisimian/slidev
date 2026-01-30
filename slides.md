@@ -226,6 +226,10 @@ clicks: 3
 <MiscTransition :clicks="$clicks" />
 
 ---
+src: ./pages/llvm/functionref.md
+---
+
+---
 layout: center
 class: text-center
 ---
