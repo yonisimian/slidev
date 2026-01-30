@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-full -mt-12">
+    <div class="flex flex-col items-center justify-center my-6">
         <!-- Comparison: std::string vs SmallString -->
         <div class="flex gap-12 transition-all duration-700"
             :class="showComparison ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
@@ -91,11 +91,11 @@ onMounted(() => {
         </div>
 
         <!-- Common pattern -->
-        <div class="mt-6 bg-gray-800/30 rounded-lg p-3 border border-gray-700 transition-all duration-700 delay-500"
+        <!-- <div class="mt-6 bg-gray-800/30 rounded-lg p-3 border border-gray-700 transition-all duration-700 delay-500"
             :class="showComparison ? 'opacity-100' : 'opacity-0'">
             <div class="text-xs text-gray-400 font-mono text-center">
                 SmallString&lt;128&gt; → 128 bytes inline → ~99% of paths fit without malloc
             </div>
-        </div>
+        </div> -->
     </div>
 </template>

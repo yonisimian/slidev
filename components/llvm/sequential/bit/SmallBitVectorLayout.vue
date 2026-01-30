@@ -87,7 +87,7 @@ const isBitSet = (idx) => activeBits.value.includes(idx)
         </div>
 
         <!-- Storage diagram -->
-        <div class="flex items-center gap-4 mt-4">
+        <!-- <div class="flex items-center gap-4 mt-4">
             <div class="text-gray-400 text-sm">Storage:</div>
             <div class="flex items-center gap-2 transition-all duration-500">
                 <div class="bg-gray-800 px-4 py-2 rounded border"
@@ -97,6 +97,6 @@ const isBitSet = (idx) => activeBits.value.includes(idx)
                     </span>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>

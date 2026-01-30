@@ -83,11 +83,11 @@ onMounted(() => {
         </div>
 
         <!-- Note -->
-        <div class="mt-4 bg-gray-800/30 rounded-lg p-2 border border-gray-700 transition-all duration-700 delay-500"
+        <!-- <div class="mt-4 bg-gray-800/30 rounded-lg p-2 border border-gray-700 transition-all duration-700 delay-500"
             :class="showContent ? 'opacity-100' : 'opacity-0'">
             <div class="text-xs text-gray-400 font-mono text-center">
                 No erase() support → IDs remain stable for the lifetime of the container
             </div>
-        </div>
+        </div> -->
     </div>
 </template>

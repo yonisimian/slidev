@@ -71,11 +71,11 @@ onMounted(() => {
         </div>
 
         <!-- Use cases -->
-        <div class="mt-4 bg-gray-800/30 rounded-lg p-2 border border-gray-700 transition-all duration-700 delay-500"
+        <!-- <div class="mt-4 bg-gray-800/30 rounded-lg p-2 border border-gray-700 transition-all duration-700 delay-500"
             :class="showContent ? 'opacity-100' : 'opacity-0'">
             <div class="text-xs text-gray-400 font-mono text-center">
                 Use cases: LLVM Type uniquing, Constant pool, SCEV expressions, AttributeSet
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
