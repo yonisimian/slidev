@@ -24,8 +24,8 @@
       <div
         class="world-card array-world"
         :class="{
+          dim: clicks === 1,
           selected: phase === 0 && clicks === 0,
-          shrink: phase === 0 && clicks === 1,
           done: phase >= 1,
         }"
       >
@@ -39,10 +39,8 @@
       <div
         class="world-card bit-world"
         :class="{
-          dim: phase === 0 && clicks === 0,
-          grow: phase === 0 && clicks === 1,
-          selected: phase === 1 && clicks === 0,
-          'shrink-purple': phase === 1 && clicks === 1,
+          dim: (phase === 0 && clicks === 0) || (phase === 1 && clicks === 1),
+          selected: (phase === 0 && clicks === 1) || (phase === 1 && clicks === 0),
           done: phase >= 2,
         }"
       >
@@ -57,7 +55,7 @@
         class="world-card string-world"
         :class="{
           dim: phase === 0 || (phase === 1 && clicks === 0),
-          'grow-green': phase === 1 && clicks === 1,
+          selected: phase === 1 && clicks === 1,
         }"
       >
         <div class="world-icon">📝</div>
@@ -173,60 +171,5 @@
     font-size: 0.8rem;
     letter-spacing: 0.05em;
     text-align: center;
-  }
-
-  /* Animations */
-  @keyframes shrinkDown {
-    from {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-
-    to {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-  }
-
-  @keyframes growUp {
-    from {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-
-    to {
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0 0 50px rgba(168, 85, 247, 0.5);
-    }
-  }
-
-  @keyframes growUpGreen {
-    from {
-      transform: scale(0.9);
-      opacity: 0.4;
-    }
-
-    to {
-      transform: scale(1.1);
-      opacity: 1;
-      box-shadow: 0 0 50px rgba(16, 185, 129, 0.5);
-    }
-  }
-
-  .shrink {
-    animation: shrinkDown 0.6s ease-out forwards;
-  }
-
-  .shrink-purple {
-    animation: shrinkDown 0.6s ease-out forwards;
-  }
-
-  .grow {
-    animation: growUp 0.6s ease-out forwards;
-  }
-
-  .grow-green {
-    animation: growUpGreen 0.6s ease-out forwards;
   }
 </style>
