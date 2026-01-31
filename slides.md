@@ -248,7 +248,7 @@ layout: center
 clicks: 1
 ---
 
-<ErrorTransition :clicks="$clicks" />
+<ErrorTransition :phase="0" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/optional.md

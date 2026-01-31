@@ -27,6 +27,7 @@
         'gap-16': cards.length === 2,
         'gap-12': cards.length === 3,
         'gap-8': cards.length === 4,
+        'gap-4': cards.length === 5,
       }"
     >
       <div
@@ -109,5 +110,14 @@
 
   .card-purple.card-active {
     box-shadow: 0 0 50px rgba(192, 132, 252, 0.2);
+  }
+
+  .card-red {
+    border-color: #f87171;
+    background: linear-gradient(135deg, #7f1d1d 0%, #4c0b0b 100%);
+  }
+
+  .card-red.card-active {
+    box-shadow: 0 0 50px rgba(248, 113, 113, 0.2);
   }
 </style>
