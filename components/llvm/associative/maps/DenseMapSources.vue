@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center justify-center mb-12">
     <!-- Head-to-head comparison -->
     <div
       class="flex gap-8 transition-all duration-700"
@@ -71,7 +71,7 @@
     </div>
 
     <!-- Key insight boxes -->
-    <div
+    <!-- <div
       class="mt-6 flex gap-4 transition-all duration-700 delay-200"
       :class="visible ? 'opacity-100' : 'opacity-0'"
     >
@@ -87,6 +87,6 @@
         <div class="text-purple-400 font-bold text-sm">~75% Load</div>
         <div class="text-gray-400 text-xs">Grows at 3/4 full</div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>

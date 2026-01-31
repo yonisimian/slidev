@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center justify-center mb-6">
     <!-- Key difference from IntervalMap -->
     <div class="flex gap-8 items-start">
       <!-- IntervalMap -->
@@ -61,13 +61,13 @@
     </div>
 
     <!-- API hint -->
-    <div class="mt-4 flex gap-4 text-xs">
+    <!-- <div class="mt-4 flex gap-4 text-xs">
       <div class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded">
         <span class="text-blue-300 font-mono">getContaining(Point)</span>
       </div>
       <div class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded">
         <span class="text-blue-300 font-mono">getOverlapping(Start, End)</span>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>

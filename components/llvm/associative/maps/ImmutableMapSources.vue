@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center justify-center mb-3">
     <!-- Mutation comparison -->
     <div class="flex gap-8 items-start">
       <!-- Mutable approach -->

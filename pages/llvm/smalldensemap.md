@@ -41,8 +41,7 @@ for (auto &BB : F)
 ```cpp
 // Common pattern: local lookup table
 void processFunction(Function &F) {
-  SmallDenseMap<Value*, Value*, 8> Replacements;
-  // All on stack for small functions!
+  SmallDenseMap<Value*, Value*, 8> Replacements; // All on stack for small functions!
   for (auto &I : instructions(F))
     if (auto *R = simplify(&I))
       Replacements[&I] = R;

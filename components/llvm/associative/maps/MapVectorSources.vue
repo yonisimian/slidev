@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center justify-center mb-6">
     <!-- Dual structure visualization -->
     <div class="flex gap-8 items-center">
       <!-- The two parts -->
@@ -78,10 +78,10 @@
     </div>
 
     <!-- Warning box -->
-    <div class="mt-4 bg-yellow-900/20 rounded-lg px-4 py-2 border border-yellow-500/30">
+    <!-- <div class="mt-4 bg-yellow-900/20 rounded-lg px-4 py-2 border border-yellow-500/30">
       <span class="text-yellow-300 text-sm">
         💡 Use when iteration order matters — common for reproducible compiler output!
       </span>
-    </div>
+    </div> -->
   </div>
 </template>

@@ -58,6 +58,6 @@ for (auto &KV : M2)
 ```
 ````
 
-<div class="text-center text-gray-400 mt-4 text-sm">
+<!-- <div class="text-center text-gray-400 mt-4 text-sm">
   💡 Share state across branches — only <span class="text-green-300 font-semibold">O(log n)</span> new nodes per update!
-</div>
+</div> -->

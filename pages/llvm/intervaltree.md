@@ -55,8 +55,3 @@ for (auto &F : M)
       DebugRanges.insert(getAddr(&I), getEnd(&I), Loc);
 ```
 ````
-
-<div class="text-center text-gray-400 mt-4 text-sm">
-  💡 <span class="text-cyan-300 font-semibold">IntervalMap</span>: disjoint, single result | 
-  <span class="text-purple-300 font-semibold">IntervalTree</span>: overlapping, multiple results
-</div>
