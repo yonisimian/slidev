@@ -220,10 +220,10 @@ clicks: 1
 ---
 layout: center
 class: text-center
-clicks: 3
+clicks: 0
 ---
 
-<MiscTransition :clicks="$clicks" />
+<MiscTransition :phase="0" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/functionref.md
@@ -231,7 +231,15 @@ src: ./pages/llvm/functionref.md
 
 ---
 layout: center
-clicks: 4
+class: text-center
+clicks: 1
+---
+
+<MiscTransition :phase="1" :clicks="$clicks" />
+
+---
+layout: center
+clicks: 1
 ---
 
 <ErrorTransition :clicks="$clicks" />
@@ -257,8 +265,24 @@ src: ./pages/llvm/unreachable.md
 ---
 
 ---
+layout: center
+class: text-center
+clicks: 1
+---
+
+<MiscTransition :phase="2" :clicks="$clicks" />
+
+---
 src: ./pages/llvm/iteration.md
 ---
+
+---
+layout: center
+class: text-center
+clicks: 1
+---
+
+<MiscTransition :phase="3" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/formatting.md
