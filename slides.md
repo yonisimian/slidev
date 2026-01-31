@@ -221,7 +221,7 @@ class: text-center
 clicks: 1
 ---
 
-<ADTUniverse :phase="1" :clicks="$clicks" />
+<ADTUniverse :phase="2" :clicks="$clicks" />
 
 ---
 layout: center
