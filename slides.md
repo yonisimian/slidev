@@ -71,7 +71,7 @@ class: text-center
 clicks: 1
 ---
 
-<SequentialTransition :phase="0" :clicks="$clicks" />
+<SequentialTransition :phase="1" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/bitvector.md
@@ -95,7 +95,7 @@ class: text-center
 clicks: 1
 ---
 
-<SequentialTransition :phase="1" :clicks="$clicks" />
+<SequentialTransition :phase="2" :clicks="$clicks" />
 
 ---
 src: ./pages/llvm/stringref.md
@@ -115,7 +115,15 @@ class: text-center
 clicks: 1
 ---
 
-<ADTUniverse :phase="0" :clicks="$clicks" />
+<SequentialTransition :phase="3" :clicks="$clicks" />
+
+---
+layout: center
+class: text-center
+clicks: 1
+---
+
+<ADTUniverse :phase="1" :clicks="$clicks" />
 
 ---
 layout: center
@@ -220,7 +228,7 @@ clicks: 1
 ---
 layout: center
 class: text-center
-clicks: 0
+clicks: 1
 ---
 
 <MiscTransition :phase="0" :clicks="$clicks" />
