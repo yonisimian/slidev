@@ -32,7 +32,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-4">
+  <div class="flex flex-col items-center gap-2">
     <h2 class="text-2xl font-bold">
       <span class="text-orange-400">FormatAdapter</span>
       <span class="text-gray-400 text-lg ml-2">— Runtime formatting helpers</span>
@@ -114,7 +114,7 @@
         <span class="text-green-400 font-mono">format_provider</span>
         <span class="text-gray-500">Static, type-based</span>
       </div>
-      <div class="text-gray-600">vs</div>
+      <div class="text-gray-600 mt-2">vs</div>
       <div class="flex flex-col items-center text-gray-400">
         <span class="text-orange-400 font-mono">FormatAdapter</span>
         <span class="text-gray-500">Dynamic, runtime helpers</span>

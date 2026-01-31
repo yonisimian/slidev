@@ -46,11 +46,11 @@
     </div>
 
     <!-- Critical warning -->
-    <div class="mt-4 bg-red-900/20 rounded-lg px-4 py-2 border border-red-500/30">
+    <!-- <div class="mt-4 bg-red-900/20 rounded-lg px-4 py-2 border border-red-500/30">
       <span class="text-red-300 text-sm">
         ⚠️ <span class="font-bold">Unchecked Expected asserts in destructor!</span>
         Always handle or consume the error.
       </span>
-    </div>
+    </div> -->
   </div>
 </template>

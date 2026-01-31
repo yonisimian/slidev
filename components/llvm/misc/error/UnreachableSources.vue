@@ -51,13 +51,5 @@
         <div class="text-gray-500 text-xs mt-1">Always crash</div>
       </div>
     </div>
-
-    <!-- Warning -->
-    <div class="bg-red-900/20 rounded-lg px-4 py-2 border border-red-500/30">
-      <span class="text-red-300 text-sm">
-        ⚠️ If llvm_unreachable is <span class="font-bold">actually reached</span> in release →
-        anything can happen!
-      </span>
-    </div>
   </div>
 </template>

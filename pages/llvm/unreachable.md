@@ -27,8 +27,7 @@ layout: center
 
 ````md magic-move
 ```cpp
-// Exhaustive switch — compiler knows all cases covered
-switch (Kind) {
+switch (Kind) { // Exhaustive switch — compiler knows all cases covered
   case Add: return "+";
   case Sub: return "-";
   case Mul: return "*";

@@ -42,11 +42,11 @@
     </div>
 
     <!-- Related: cantFail -->
-    <div class="bg-yellow-900/20 rounded-lg px-4 py-2 border border-yellow-500/30">
+    <!-- <div class="bg-yellow-900/20 rounded-lg px-4 py-2 border border-yellow-500/30">
       <span class="text-yellow-300 text-sm">
         See also: <span class="font-mono">cantFail()</span> — asserts instead of exiting (for
         "impossible" errors)
       </span>
-    </div>
+    </div> -->
   </div>
 </template>
