@@ -19,13 +19,6 @@ clicks: 1
 <MiscTransition :phase="1" :clicks="$clicks" />
 
 ---
-layout: center
-clicks: 1
----
-
-<ErrorTransition :phase="0" :clicks="$clicks" />
-
----
 src: ./error/optional.md
 ---
 
