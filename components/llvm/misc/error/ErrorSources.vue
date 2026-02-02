@@ -7,9 +7,9 @@
       <div class="text-sm text-gray-400 mb-2 text-center">Custom Error Types</div>
       <div class="font-mono text-xs space-y-1">
         <div class="text-gray-300">
-          <span class="text-[#569cd6]">class</span>
+          <span class="text-[#569cd6]">class </span>
           <span class="text-[#4ec9b0]">MyError</span> :
-          <span class="text-[#569cd6]">public</span>
+          <span class="text-[#569cd6]">public </span>
           <span class="text-[#4ec9b0]">ErrorInfo</span>&lt;<span class="text-[#4ec9b0]"
             >MyError</span
           >&gt; {
@@ -19,7 +19,7 @@
           <span class="text-gray-500">// Required for RTTI</span>
         </div>
         <div class="text-gray-300 pl-4">
-          <span class="text-[#569cd6]">void</span>
+          <span class="text-[#569cd6]">void </span>
           <span class="text-[#dcdcaa]">log</span>(raw_ostream &OS)
           <span class="text-[#569cd6]">const override</span>;
         </div>
