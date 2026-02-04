@@ -1,20 +1,20 @@
 <script setup>
   import { ref, computed, onMounted } from 'vue'
 
-  const totalBits = 32
+  const totalBits = 16
   const cellWidth = 26
 
   // Animation state
   const step = ref(0)
-  const activeBits = ref([5, 12, 20, 28])
+  const activeBits = ref([])
 
   // Animation sequence - showing set operations
   const animations = [
-    { bits: [5, 12, 20, 28], label: 'Initial state' },
-    { bits: [5, 12, 20, 28, 7], label: 'set(7)' },
-    { bits: [5, 7, 20, 28], label: 'reset(12)' },
-    { bits: [5, 7, 20, 28, 0, 31], label: 'set(0), set(31)' },
-    { bits: [5, 12, 20, 28], label: 'Back to initial' },
+    { bits: [], label: 'Initial state' },
+    { bits: [7], label: 'set(7)' },
+    { bits: [5, 7], label: 'set(5)' },
+    { bits: [5], label: 'reset(7)' },
+    { bits: [], label: 'clear()' },
   ]
 
   const animateNext = () => {
@@ -33,22 +33,22 @@
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-6 mt-4">
+  <div class="flex flex-col items-center gap-6 mt-6">
     <!-- BitVector code block -->
     <div class="flex items-start gap-6 pl-32">
       <div class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden shadow-xl">
         <pre
           class="px-4 py-3 font-mono text-sm leading-relaxed"
-        ><span class="text-[#569cd6]">class</span> <span class="text-[#4ec9b0]">BitVector</span> <span class="text-[#d4d4d4]">{</span>
-    <span class="text-[#4ec9b0]">MutableArrayRef</span><span class="text-[#d4d4d4]">&lt;</span><span class="text-[#4ec9b0]">BitWord</span><span class="text-[#d4d4d4]">&gt;</span> <span class="text-[#9cdcfe]">Bits</span><span class="text-[#d4d4d4]">;</span>  <span class="text-[#6a9955]">// 64-bit words</span>
-    <span class="text-[#4ec9b0]">unsigned</span> <span class="text-[#9cdcfe]">Size</span> <span class="text-[#d4d4d4]">=</span> <span class="text-[#b5cea8]">{{ totalBits }}</span><span class="text-[#d4d4d4]">;</span>       <span class="text-[#6a9955]">// bit count</span>
+        ><span class="text-[#569cd6]">class</span> <span class="text-[#4ec9b0]">BitVector</span><span class="text-[#d4d4d4]"> {</span>
+    <span class="text-[#4ec9b0]">SmallVector</span><span class="text-[#d4d4d4]">&lt;</span><span class="text-[#4ec9b0]">BitWord</span><span class="text-[#d4d4d4]">&gt;</span> <span class="text-[#9cdcfe]">Bits</span><span class="text-[#d4d4d4]">;</span><span class="text-[#6a9955]"> // 64-bit words</span>
+    <span class="text-[#4ec9b0]">unsigned</span> <span class="text-[#9cdcfe]">Size</span> <span class="text-[#d4d4d4]">=</span> <span class="text-[#b5cea8]">{{ totalBits }}</span><span class="text-[#d4d4d4]">;</span><span class="text-[#6a9955]">        // bit count</span>
 <span class="text-[#d4d4d4]">};</span></pre>
       </div>
       <div class="text-gray-500 text-sm mt-2">← Dynamic allocation</div>
     </div>
 
     <!-- Operation indicator -->
-    <div class="text-purple-400 font-mono text-lg h-8">
+    <div class="text-purple-400 font-mono text-lg h-8 mt-6">
       {{ animations[step].label }}
     </div>
 
@@ -56,7 +56,7 @@
     <div class="relative w-full flex justify-center">
       <div
         class="grid grid-cols-16 justify-center gap-4"
-        :style="{ maxWidth: cellWidth * 16 + 16 + 'px' }"
+        :style="{ maxWidth: cellWidth * 16 + 32 + 'px' }"
       >
         <div v-for="idx in totalBits" :key="idx - 1">
           <!-- Bit value -->
