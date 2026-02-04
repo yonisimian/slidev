@@ -2,7 +2,6 @@
 
 ## Slides Fixes
 
-- BitVector: make it 16, not 32
 - SmallBitVectorLayout: uncomment the Storage diagram but somewhere else on the screen
 - PagedVectorSources: show the "No begin()/end()" only when clicks=3 (last slide)
 - PackedVector: make it clearer that top is 8 bytes and bottom is 2 bytes
