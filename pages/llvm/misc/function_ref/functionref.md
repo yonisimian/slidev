@@ -14,6 +14,8 @@ layout: center
 -->
 
 ---
+clicks: 3
+---
 
 <h1 class="view-transition-block">function_ref</h1>
 
@@ -27,32 +29,33 @@ layout: center
 
 ````md magic-move
 ```cpp
-// Accept any callable with signature: int(int, int)
-void compute(function_ref<int(int, int)> op) {
-  int result = op(10, 20);
-  errs() << "Result: " << result << "\n";
-}
+void compute(function_ref<int(int, int)> op);
+
+compute([](int a, int b) { return a + b; });
 ```
 
 ```cpp
-// Works with lambdas
-compute([](int a, int b) { return a + b; });  // 30
-compute([](int a, int b) { return a * b; });  // 200
+void compute(function_ref<int(int, int)> op);
+
+std::function<int(int, int)> fn = [](int a, int b) { return a * b; };
+compute(fn);
 ```
 
 ```cpp
-// Works with function pointers
+void compute(function_ref<int(int, int)> op);
+
 int multiply(int a, int b) { return a * b; }
-compute(multiply);  // 200
+compute(multiply);
 ```
 
 ```cpp
-// Works with functors (stateful objects)
+void compute(function_ref<int(int, int)> op);
+
 struct Adder {
   int offset;
   int operator()(int a, int b) { return a + b + offset; }
 };
-compute(Adder{5});  // 35
+compute(Adder{5});
 ```
 ````
 

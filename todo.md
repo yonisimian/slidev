@@ -46,6 +46,8 @@ Use the commented-out "use-cases" sections for the audio script:
 - ExpectedSources
 - ExitOnErrorSources
 
+For the function_ref script, mention that it's only 16 bytes compared to std::function's 32 bytes (or more if it allocates). Say something about vtable, allocator and type erasure.
+
 ## Next Video Topics
 
 - basic classes (Module, Function, Instruction, BasicBlock)
